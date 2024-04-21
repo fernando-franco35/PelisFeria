@@ -448,9 +448,12 @@ img{
 }
 
 @media(max-width:500px){
+	.headerNavIndex,.headerRegistroNav,.headerDetalleNav{
+		height: 10vh;
+	}
 	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
 		width: 98%;
-		padding: 10px;
+		padding: 0 10px;
 	}
 	.headerRegistro{
 		height: 100%;
