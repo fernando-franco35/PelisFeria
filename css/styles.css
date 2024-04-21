@@ -16,7 +16,7 @@ p{
 }
 
 .logo {
-	padding: 0;
+	padding: 10px;
 }
 
 .header{
@@ -31,8 +31,6 @@ p{
 .headerNavIndex,.headerRegistroNav,.headerDetalleNav{
 	background-color: #fdf3f31a;
 	width: 100%;
-	position: fixed;
-	top: 0;
 }
 
 .headerRegistro{
@@ -330,8 +328,7 @@ img{
 .footer_interno{
 	display: grid;
 	grid-template-columns: 3fr 1fr;
-	column-gap: 30px;
-
+	column-gap: 100px;
 }
 
 .redes{
@@ -395,7 +392,6 @@ img{
 	.mainDetalle{
 	  display: flex;
 	  flex-direction: column;
-	  margin: 40px auto;
 	  color: white;
 	  width: 70%;
   }  
@@ -404,11 +400,11 @@ img{
  	  justify-content: center;
   }
   .mainDetalle div:nth-child(2) {
- 	  margin: 0;
+ 	  margin: ;
   }
   .mainDetalle2{
   	display:block;
-  	margin: 30px;
+  	margin: auto;
   }
   .mainDetalle2__especificaciones{
   	justify-content: center;
@@ -449,22 +445,22 @@ img{
 	text-align: center;
 	line-height: 2rem;
 }
-
 }
 
 @media(max-width:500px){
 	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
 		width: 98%;
-		padding: 0;
+		padding: 10px;
 	}
 	.headerRegistro{
+		height: 100%;
 		width: 100%;
 	}
-	.formRegistro{
-	 margin: auto;
+	.formInicio{
+		width: 280px;
 	}
-	.formulario{
-		flex-direction: column;
+	.formRegistro{
+		margin: auto;
 	}
 	.header{
 		height: 350px;
