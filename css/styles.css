@@ -1,7 +1,6 @@
 body{
 	background-color: #223143;
 	margin: 0;
-
 	padding: 0;
 }
 
@@ -94,7 +93,7 @@ a{
 }
 
 .formInicio{
-	height: 180px;
+	text-align: center;
 }
 
 legend{
@@ -117,6 +116,14 @@ legend{
 .formInicio .inputs{
 	margin-bottom: 10px;
 } 
+
+.formInicio p{
+	margin: 0;
+}
+
+.formInicio p:hover{
+	text-decoration: underline;
+}
 
 .inputs::placeholder{
 	color: lightgray;
@@ -168,6 +175,7 @@ legend{
 .buscador input{
 	width: 300px;
 	height: 28px;
+	border: none;
 	border-radius: 18px;
 	text-align: center;
 	margin:  auto;
@@ -179,7 +187,8 @@ legend{
 
 .buscador button{
 	padding: 5px 15px;
-	margin: auto;
+	margin: 10px auto;
+	border: none;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -444,11 +453,18 @@ img{
 }
 
 @media(max-width:500px){
-	.headerRegistroNav a{
-		opacity: 0.5;
+	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
+		width: 98%;
+		padding: 0;
+	}
+	.headerRegistro{
+		width: 100%;
 	}
 	.formRegistro{
-		width: 80%;
+	 margin: auto;
+	}
+	.formulario{
+		flex-direction: column;
 	}
 	.header{
 		height: 350px;
