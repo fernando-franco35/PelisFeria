@@ -236,10 +236,15 @@ button{
  margin: auto;
 }
 
+
 img{
 	border: white 1px solid;
 	height: 220px;
 	width:  150px;
+}
+
+img:hover{
+	box-shadow: 0 0 20px white;
 }
 
 /*-------------------------styles pagina detalles*/
