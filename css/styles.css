@@ -192,8 +192,12 @@ legend{
 	flex-wrap: wrap;
 }
 
+.buscador button:hover{
+	background-color: #7c072afb;
+}
+
 .catalogoPrincipal h2{
-	padding-top: 10px;
+	padding: 40px;
 	text-transform: uppercase;
 	text-align: center;
 	color: white;
@@ -219,6 +223,19 @@ legend{
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 20px;
+}
+
+.catalogoFinal div{
+	display: flex;
+	flex-direction: row;
+	margin: 30px auto;
+	max-width: 85%;
+	height: 260px;
+	overflow: auto;
+}
+
+.catalogoFinal div a{
+	padding: 0 40px;
 }
 
 button{
@@ -405,7 +422,7 @@ img:hover{
  	  justify-content: center;
   }
   .mainDetalle div:nth-child(2) {
- 	  margin: ;
+ 	   margin: 0; 
   }
   .mainDetalle2{
   	display:block;
