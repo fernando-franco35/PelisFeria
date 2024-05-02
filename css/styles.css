@@ -2,6 +2,7 @@ body{
 	background-color: #223143;
 	margin: 0;
 	padding: 0;
+	box-sizing: content-box;
 }
 
 .bodyRegistro{
@@ -72,7 +73,7 @@ a{
 .navegador:hover:not(.active){
 	opacity: 1;
 }
-
+/*----------------------------------------------------------- S T Y L E S      R E G I S T R O ------*/
 .formulario{
 	margin: 50px auto;
 	display: flex;
@@ -133,7 +134,7 @@ legend{
 }
 
 .inputs:focus-visible{
-		outline: none;
+	outline: none;
 }
 
 .email:invalid{
@@ -141,12 +142,17 @@ legend{
 }
 
 .check{
-	margin-left: 0;
-	text-align: left;
-	margin: 8px;
+	display: flex;
+	justify-content: left;
+	margin: 10px;
 	font-size: 0.6rem;
 	border: none;
 	color: white;
+	column-gap: 10px;
+}
+
+input[type="checkbox"]{
+	width: 15px;
 }
 
 .boton{
@@ -164,6 +170,15 @@ legend{
 
 .boton:hover{
 	background-color: darkred;
+}
+
+.parrafoValidacion{
+	font-size: .7rem;
+	overflow: hidden;
+	text-align: center;
+	height: 20px;
+	padding: 5px;
+	margin: 0%;
 }
 
 .buscador{
@@ -337,7 +352,7 @@ img:hover{
 	padding-top: 20px;
 }
 
-/*--------------------------styles footer*/
+/*-------------------------------------------------------------- styles footer ----------*/
 .footer{
 	color: white;
 	padding: 30px 50px;
@@ -359,7 +374,7 @@ img:hover{
 	justify-content: space-around;
 	align-items: center;
 	column-gap: 30px;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .logos{
@@ -452,7 +467,7 @@ img:hover{
 	}
 	.redes{
 	margin: 30px auto;
-	width: 50px;
+	width: 100%;
   }
   .logos{
   margin-top: 8px;

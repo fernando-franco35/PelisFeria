@@ -29,8 +29,7 @@
 		
 		<legend>registro</legend>
 		<div>
-			<label style="color: antiquewhite;">nombre</label>
-			<input class="inputs" type="text" id="nombre">
+			<input class="inputs" type="text" placeholder="nombre" id="nombre">
 		</div>
 		<div>
 			<input class="inputs" type="text" placeholder="apellido" id="apellido">
@@ -42,15 +41,15 @@
 			<input class="inputs" type="password" placeholder="contraseña" id="contraseña">
 		</div>
 		<div class="check">
-			<input type="checkbox" id="check">acepto terminos y condiciones
+			<input type="checkbox" id="check">
+			<p>acepto terminos y condiciones</p>
 	    </div>
 	    <div>
-			<input class="boton" type="submit" id="boton" value="registrarse" onclick="validacion()">
+			<input class="boton" type="button" id="boton" value="registrarse" onclick="validacion()">
 		</div>
 		<div>
-			<p id="parrafoValidacion"></p>
+			<p class="parrafoValidacion" id="parrafoValidacion"></p>
 		</div>
-		
 	</form>
 </div>
 	
@@ -80,5 +79,6 @@
 			<div><a href="#">especificaciones de anuncio</a></div>
 		</div>
 	</footer>
+	<script src="../js/scripts.js"></script>
 </body>
 </html>
