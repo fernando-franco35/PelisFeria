@@ -128,6 +128,7 @@ legend{
 }
 
 .inputs:hover{
+	cursor: pointer;
 	background-color: gray;
 }
 

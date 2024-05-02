@@ -29,35 +29,26 @@
 		
 		<legend>registro</legend>
 		<div>
-			<input class="inputs" type="text" placeholder="nombre">
+			<label style="color: antiquewhite;">nombre</label>
+			<input class="inputs" type="text" id="nombre">
 		</div>
 		<div>
-			<input class="inputs" type="text" placeholder="apellido">
+			<input class="inputs" type="text" placeholder="apellido" id="apellido">
 		</div>
 		<div>
-			<input class="inputs email" type="email" placeholder="email">
+			<input class="inputs email" type="email" placeholder="email" id="email">
 		</div>
 		<div>
-			<input class="inputs" type="password" placeholder="contraseña">
-		</div>
-		<div>
-			<input class="inputs" type="date" placeholder="dd/mm/aaaa">
-		</div>
-		<div>
-			<select class="inputs">  
-				<option disabled selected> pais </option>
-				<option>argentina</option>
-				<option>brasil</option>
-				<option>chile</option>
-				<option>uruguay</option>
-				<option>bolivia</option>
-			</select>
+			<input class="inputs" type="password" placeholder="contraseña" id="contraseña">
 		</div>
 		<div class="check">
-			<input type="checkbox">acepto terminos y condiciones
+			<input type="checkbox" id="check">acepto terminos y condiciones
 	    </div>
 	    <div>
-			<input class="boton" type="submit" value="registrarse">
+			<input class="boton" type="submit" id="boton" value="registrarse" onclick="validacion()">
+		</div>
+		<div>
+			<p id="parrafoValidacion"></p>
 		</div>
 		
 	</form>
