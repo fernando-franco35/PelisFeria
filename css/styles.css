@@ -528,7 +528,7 @@ img:hover{
 		justify-content: center;
 	}
 	img{
-		width: 300px;
+		width: 80%;
 		height: 400px;
 	}
 	.catalogoFinal div{
@@ -537,6 +537,9 @@ img:hover{
 	}
 	.catalogoFinal div a:first-child{
 		padding-left: 0;
+	}
+	.mainDetalle2__especificaciones{
+		column-gap: 0;
 	}
 	.footer{
 		max-width: 100%;
