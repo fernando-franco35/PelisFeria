@@ -494,7 +494,7 @@ img:hover{
 
 @media(max-width:500px){
 	.headerNavIndex,.headerRegistroNav,.headerDetalleNav{
-		height: 8vh;
+		height: 10vh;
 	}
 	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
 		width: 100%;
@@ -528,7 +528,7 @@ img:hover{
 		justify-content: center;
 	}
 	img{
-		width: 250px;
+		width: 290px;
 		height: 400px;
 	}
 	.catalogoFinal div{
