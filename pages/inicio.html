@@ -25,22 +25,24 @@
 </header>
 
 <div class="formulario formularioInicio">
-	<form class="formRegistro formInicio">
+	<form class="formRegistro formInicio" id="form">
 		
 		<legend>iniciar sesion</legend>
 		<div>
-			<input class="inputs email" type="email" placeholder="email">
+			<input class="inputs email" type="email" placeholder="email" id="email">
 		</div>
 		<div>
-			<input class="inputs" type="password" placeholder="contraseña">
+			<input class="inputs" type="password" placeholder="contraseña" id="contraseña">
 		</div>
 	    <div class="boton-inicioSesion">
-			<input class="boton" type="submit" value="iniciar sesion">
+			<input class="boton" type="button" id="boton" value="iniciar sesion" onclick="validacion()">
 		</div>
 		<div>
 			<a href="registrarse.html" target="_blank"><p>¿ no tenes usuario ?</p></a>
 		</div>
-		
+		<div>
+			<p class="parrafoValidacion" id="parrafoValidacion"></p>
+		</div>
 	</form>
 </div>
 	
@@ -70,5 +72,6 @@
 			<div><a href="#">especificaciones de anuncio</a></div>
 		</div>
 	</footer>
+	<script src="../js/scriptsInicio.js"></script>
 </body>
 </html>
