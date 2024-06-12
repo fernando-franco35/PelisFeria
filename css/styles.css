@@ -435,8 +435,9 @@ img:hover{
 	letter-spacing: 1px;
 }
 
-input{
+.inputgestion{
 	outline: none;
+	background-color: white;
 }
 
 .column input:not(:last-child){
