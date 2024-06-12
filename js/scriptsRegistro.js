@@ -76,6 +76,8 @@
             //document.getElementById("parrafoValidacion").innerHTML = "ya estas registrado";            
         }
     };
+
+    
    function limpiarCampos(){
         let campos = document.querySelectorAll(".inputs");
         campos.forEach((campo) => {

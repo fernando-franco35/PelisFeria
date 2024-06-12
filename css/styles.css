@@ -2,7 +2,7 @@ body{
 	background-color: #223143;
 	margin: 0;
 	padding: 0;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 
 .bodyRegistro{
@@ -186,12 +186,13 @@ input[type="checkbox"]{
 }
 
 .buscador input{
-	width: 300px;
+	width: 80%;
 	height: 28px;
 	border: none;
 	border-radius: 18px;
 	text-align: center;
-	margin:  auto;
+	margin: auto;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -220,7 +221,7 @@ input[type="checkbox"]{
 }
 
 .catalogoPrincipal{
-	max-width: 85%;
+	max-width: 90%;
 	margin: 20px auto;
 	animation: recargar 4s both;
 }
@@ -283,6 +284,19 @@ img{
 
 img:hover{
 	box-shadow: 0 0 20px white;
+}
+
+.enlaceAdministrador{
+	margin: auto;
+	width: 150px;
+	display: flow-root;
+	text-transform: uppercase;
+	background-color: indianred;
+	padding: 10px 35px;
+}
+
+.enlaceAdministrador:hover{
+	background-color: darkred;
 }
 
 /*-------------------------------------------------------------------- STYLES PAGINA DETALLES ---------------*/
@@ -356,6 +370,114 @@ img:hover{
 .lista1 li:not(:first-child),.lista2 li:not(:first-child){
 	padding-top: 20px;
 }
+/*----------------------------------------------------------------------- STYLES GESTION PELICULAS --------------*/
+.centrar-gestion{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-transform:uppercase;
+	margin: 50px auto;
+}
+
+.cabecera{
+	width: 80%;
+}
+
+.btn-agregarpelicula{
+	border: none;
+	background-color: #0b8724;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+	width: 40%;
+	border-radius: 0;
+	outline: none;
+}
+
+.row1-gestion{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	gap: 5px;
+	box-sizing: border-box;
+}
+
+.row2-gestion{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 5px;
+}
+
+.sinopsis textarea{
+	outline: none;
+	height: 50px;
+	border-radius: 4px;
+}
+
+.archivo input	{
+	background-color: white;
+	width: 100%;
+	color: black;
+}
+
+.titulo-gestion,.parrafo-gestion{
+	text-align: center;
+	color: white;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+	color: white;
+	text-transform: lowercase;
+	margin: 5px 0;
+	letter-spacing: 1px;
+}
+
+input{
+	outline: none;
+}
+
+.column input:not(:last-child){
+	box-sizing: border-box;
+	border-radius: 4px;
+	outline: none;
+	border: none;
+	height: 25px;
+	padding-left: 5px;
+}
+
+@media(max-width:630px){
+	.row1-gestion{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	
+	.row2-gestion{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		padding: 0;
+	}
+	.column{
+		margin: 0;
+	}
+	.btn-agregarpelicula{
+		border: none;
+		background-color: #0b8724;
+		margin: 10px 0 0 0;
+		padding: 10px;
+		color: white;
+		text-transform: capitalize;
+		width: 100%;
+		border-radius: 0;
+	}	
+	.titulo-gestion,.parrafo-gestion{
+		text-align: center;
+	}
+}
 
 /*----------------------------------------------------------------------------- STYLES FOOTER --------------*/
 .footer{
@@ -368,8 +490,10 @@ img:hover{
 
 .footer_interno{
 	display: grid;
-	grid-template-columns: 3fr 1fr;
+	grid-template-columns: repeat(2,1fr);
 	column-gap: 100px;
+	align-items: center;
+	text-align: center;
 }
 
 .redes{
@@ -377,9 +501,11 @@ img:hover{
 	justify-content: space-around;
 	align-items: center;
 	column-gap: 30px;
-	opacity: 0.8;
 }
 
+.redes a{
+	opacity: 0.5;
+}
 .logos{
 	background-color: white;
 	padding: 15px;
@@ -403,7 +529,11 @@ img:hover{
 	opacity: 0.5;
 }
 
-.panelDeAyuda a:hover,.redes a:hover{
+.panelDeAyuda a:hover{
+	opacity: 1;
+}
+
+.redes a:hover{
 	opacity: 1;
 }
 
@@ -417,20 +547,18 @@ img:hover{
 		padding-left: 20px;
 	}
 	.catalogoPrincipal{
-		max-width: 80%;
-		margin: 20px auto;
-	}
-	.catalogoInterno{
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		margin: auto;
+		width: 100%;	
+	}
+	.catalogoFinal img{
+		width: 150px;
 	}
 	img{
-		width: 200px;
+		width: 100px;
 		box-shadow: 0 0 10px white;
 	}
-	.fotos{
-		margin: 10px auto;
+	.fotos a{
+		padding: 0;
 	}
 	.mainDetalle{
 	  display: flex;
@@ -438,7 +566,7 @@ img:hover{
 	  color: white;
 	  width: 70%;
   	}  
-	  .mainDetalle div:nth-child(1) {
+	.mainDetalle div:nth-child(1) {
  	  display: flex;
  	  justify-content: center;
   	}
@@ -456,7 +584,7 @@ img:hover{
 	.footer{	
 	  margin-top: 50px;
 	  color: white;
-	  padding: 30px auto;
+	  padding: 10px auto;
 	  display: block;
 	  background-color: gray;
 	  text-align: center;
@@ -471,11 +599,10 @@ img:hover{
 	  text-align: center;
 	}
 	.redes{
-	  margin: 30px auto;
-	  width: 100%;
+	  margin: 60px auto 30px;
+	  width: 80%;
     }
     .logos{
-      margin-top: 8px;
 	  background-color: white;
 	  padding: 10px;
 	  border-radius: 50% ;
@@ -492,7 +619,7 @@ img:hover{
 
 @media(max-width:500px){
 	.headerNavIndex,.headerRegistroNav,.headerDetalleNav{
-		height: 10vh;
+		height: 100%;
 	}
 	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
 		width: 100%;
@@ -519,19 +646,33 @@ img:hover{
 		background-position: center;
 	}
 	.catalogoInterno{
-		display: block;
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		align-items: center;
+		margin-top: 20px;
+		row-gap: 20px;
 	}
 	.fotos{
 		display: flex;
+		align-items: center;
 		justify-content: center;
 	}
-	img{
-		width: 250px;
-		height: 400px;
+	a{
+		padding: 0;
 	}
-	.catalogoFinal div{
-		height: 450px;	
-		padding: 40px 10px;
+	img{
+		height: 200px;
+	}
+	.catalogoFinal{
+		width: 50%;
+	}
+	.catalogoFinal img{
+		height: 200px;
+		width: 100px;
+	}
+	.catalogoFinal{
+		height: 200px;
+		width: 100%;
 	}
 	.catalogoFinal div a:first-child{
 		padding-left: 0;
@@ -540,7 +681,18 @@ img:hover{
 		column-gap: 0;
 	}
 	.footer{
-		max-width: 100%;
+		margin-top: 320px;
+		padding: 40px 0;
+	}
+	.redes{
+		gap: 0;
+	}
+	.fondomarvel{
+		background-image: none;
+		padding: 0 20px;
+	}
+	.enlaceAdministrador{
+		padding: 10px;
 	}
 }
 
@@ -549,7 +701,7 @@ img:hover{
 	 height: 40px;
 	 width: 45%;
 	 position: fixed;
-	 bottom: 60px;
+	 bottom: 125px;
 	 left: 10px;
 	 border: 1px solid black;
 	 background-color:#1313a1a3;
