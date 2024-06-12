@@ -186,7 +186,7 @@ input[type="checkbox"]{
 }
 
 .buscador input{
-	width: 80%;
+	width: 40%;
 	height: 28px;
 	border: none;
 	border-radius: 18px;
@@ -618,6 +618,9 @@ input{
 }
 
 @media(max-width:500px){
+	.buscador input{
+		width: 80%;
+	}
 	.headerNavIndex,.headerRegistroNav,.headerDetalleNav{
 		height: 100%;
 	}
