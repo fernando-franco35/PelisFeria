@@ -437,7 +437,7 @@ img:hover{
 
 .inputgestion{
 	outline: none;
-	background-color: white;
+	background-color: ;
 }
 
 .column input:not(:last-child){
@@ -666,13 +666,14 @@ img:hover{
 	}
 	img{
 		height: 200px;
+		width: 150px;
 	}
 	.catalogoFinal{
 		width: 50%;
 	}
 	.catalogoFinal img{
 		height: 200px;
-		width: 100px;
+		width: 150px;
 	}
 	.catalogoFinal{
 		height: 200px;
