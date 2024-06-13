@@ -437,7 +437,7 @@ img:hover{
 
 .inputgestion{
 	outline: none;
-	background-color: ;
+	background-color: white;
 }
 
 .column input:not(:last-child){
