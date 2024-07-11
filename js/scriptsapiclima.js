@@ -8,7 +8,6 @@
 	const units = "metric";
 	// Idioma para los datos de respuesta (en este caso, español)
 	const lang = "es";
-
 	// Realizar una solicitud GET a la API del clima
 	const response = await fetch(`${url}?q=${city}&appid=${apiKey}&units=${units}&lang=${lang}`);
 	// Convertir la respuesta a formato JSON
@@ -22,25 +21,22 @@
 async function updateWeatherCard(city) {
 	// Obtener los datos del clima para la ciudad especificada
 	const weatherData = await fetchWeather(city);
-	console.log(weatherData);
 	// Actualizar el elemento HTML con el nombre de la ciudad
 	document.getElementById("city").textContent = weatherData.name;
 	// Actualizar el elemento HTML con la temperatura
 	document.getElementById("temperature").textContent = (weatherData.main.temp).toFixed(1);
-	// Actualizar el elemento HTML con la descripción del clima
-	//document.getElementById("weather").textContent = weatherData.weather[0].description;
 	// Actualizar el elemento HTML con la humedad
 	document.getElementById("humidity").textContent = weatherData.main.humidity;
-	console.log(weatherData.main.humidity);// Actualizar el elemento HTML con la velocidad del viento
-	//document.getElementById("windSpeed").textContent = weatherData.wind.speed;
+	//obtener la descripcion del cielo 
+	document.getElementById("description").textContent = weatherData.weather[0].description;
 	// Obtener el código del icono del clima
 	const iconCode = weatherData.weather[0].icon;
 	// Construir la URL del icono del clima
 	const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
 	// Actualizar el elemento HTML con el ícono del clima
-	//document.getElementById("weatherIcon").src = iconUrl;
+	document.getElementById("weatherIcon").src = iconUrl;
 	// Establecer el atributo "alt" del ícono del clima con la descripción del clima
-	//document.getElementById("weatherIcon").alt = weatherData.weather[0].description;
+	document.getElementById("weatherIcon").alt = weatherData.weather[0].description;
 }
 
 // Llamar a la función updateWeatherCard con la ciudad de "Buenos Aires"

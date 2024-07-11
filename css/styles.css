@@ -1,3 +1,4 @@
+/*elimino los margenes y bordes que tienen por defecto*/
 body{
 	background-color: #223143;
 	margin: 0;
@@ -176,8 +177,9 @@ input[type="checkbox"]{
 	overflow: hidden;
 	text-align: center;
 	height: 20px;
-	padding: 5px;
+	padding: 15px 5px;
 	margin: 0%;
+	color: white;
 }
 
 .buscador{
@@ -234,6 +236,7 @@ input[type="checkbox"]{
 		opacity: 1;
 	}
 }
+
 .catalogoInterno{
 	display: flex;
 	flex-direction: row;
@@ -272,7 +275,7 @@ button{
 }
 
 .fotos{
- margin: auto;
+	margin: auto;
 }
 
 
@@ -284,19 +287,6 @@ img{
 
 img:hover{
 	box-shadow: 0 0 20px white;
-}
-
-.enlaceAdministrador{
-	margin: auto;
-	width: 150px;
-	display: flow-root;
-	text-transform: uppercase;
-	background-color: indianred;
-	padding: 10px 35px;
-}
-
-.enlaceAdministrador:hover{
-	background-color: darkred;
 }
 
 /*-------------------------------------------------------------------- STYLES PAGINA DETALLES ---------------*/
@@ -538,6 +528,18 @@ img:hover{
 	opacity: 1;
 }
 
+.enlaceAdministrador{
+	margin: auto;
+	width: 150px;
+	text-transform: uppercase;
+	background-color: indianred;
+	padding: 10px 35px;
+}
+
+.enlaceAdministrador:hover{
+	background-color: darkred;
+}
+
 /*--------------------------------------------------------------- STYLES SCREEN TABLETS Y CELULARES -------------------*/
 
 @media(max-width:935px){
@@ -552,11 +554,10 @@ img:hover{
 		width: 100%;	
 	}
 	.catalogoFinal img{
-		width: 150px;
+		width: 100px;
 	}
 	img{
 		width: 100px;
-		box-shadow: 0 0 10px white;
 	}
 	.fotos a{
 		padding: 0;
@@ -670,6 +671,7 @@ img:hover{
 	}
 	.catalogoFinal{
 		width: 50%;
+		margin-bottom: 350px;
 	}
 	.catalogoFinal img{
 		height: 200px;
@@ -686,7 +688,6 @@ img:hover{
 		column-gap: 0;
 	}
 	.footer{
-		margin-top: 320px;
 		padding: 40px 0;
 	}
 	.redes{
@@ -697,20 +698,18 @@ img:hover{
 		padding: 0 20px;
 	}
 	.enlaceAdministrador{
+		display: flow-root;
 		padding: 10px;
 	}
 }
 
-/*ESTILOS PARA API CLIMA*/
+/*-------------------ESTILOS PARA API CLIMA-----------------------*/
 .container{
-	 height: 40px;
-	 width: 45%;
+	 height: 35px;
+	 width: 100%;
 	 position: fixed;
-	 bottom: 125px;
-	 left: 10px;
-	 border: 1px solid black;
-	 background-color:#1313a1a3;
-	 border-radius: 10px;
+	 bottom: 0;
+	 background-color:rgba(255, 255, 255, 0.37);
 	 box-sizing: border-box;
 }
      
@@ -727,8 +726,6 @@ img:hover{
 	
 .card-titulo h2{
 	 margin: auto;	
-/*	 justify-content: center;
-	 align-items: center;*/
 }
 	
 .card-info{	 
@@ -746,26 +743,32 @@ img:hover{
 .card-info p{
 	margin: 0;
 }
+
+.imagenApi{
+	height: 100%; 
+	width: auto; 
+	border: none;
+}
+
+
+.imagenApi:hover{
+	box-shadow: none;
+}
+
 /*MEDIA QUERY SOLO PARA API CLIMA*/	
-@media(max-width: 1010px){
+@media(max-width: 645px){
 	.container{
-		margin: auto;
-		width: 120px;
-		height: 120px;
-		border-radius: 50%;
+		height: 30px;
 		position: fixed;
-		bottom: 10px;
-		left: 10px;
+		bottom: 0;
 	}
-	.card-titulo , .card-info p:last-child{
+	.card-titulo,.city,.description{
 		display: none;
 	}
 	.card-info{
 		width: 100%;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
-		
 	}
 }
 /*--------------------------------*/
