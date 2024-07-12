@@ -73,15 +73,15 @@ a{
 .navegador:hover:not(.active){
 	opacity: 1;
 }
-/*----------------------------------------------------------- S T Y L E S      R E G I S T R O ------*/
+/*------------------ STYLES REGISTRARSE E INICIO ----------------------*/
 .formulario{
-	margin: 50px auto;
+	margin: 60px auto;
 	display: flex;
 	justify-content: center;
 }
 
 .formularioInicio{
-	margin: 90px auto;
+	margin: 80px auto;
 }
 
 .formRegistro{
@@ -93,6 +93,7 @@ a{
 
 .formInicio{
 	text-align: center;
+	height: 250px;
 }
 
 legend{
@@ -178,7 +179,7 @@ input[type="checkbox"]{
 	text-align: center;
 	height: 20px;
 	padding: 15px 5px;
-	margin: 0%;
+	margin: 0;
 	color: white;
 }
 
@@ -278,18 +279,17 @@ button{
 	margin: auto;
 }
 
-
 img{
 	border: white 1px solid;
 	height: 220px;
-	width:  150px;
+	width: 150px;
 }
 
 img:hover{
 	box-shadow: 0 0 20px white;
 }
 
-/*-------------------------------------------------------------------- STYLES PAGINA DETALLES ---------------*/
+/*------------------------- STYLES PAGINA DETALLES ---------------------------*/
 
 .bodyDetalle{
 	background-color: #223143;
@@ -360,7 +360,7 @@ img:hover{
 .lista1 li:not(:first-child),.lista2 li:not(:first-child){
 	padding-top: 20px;
 }
-/*----------------------------------------------------------------------- STYLES GESTION PELICULAS --------------*/
+/*-------------------------------- STYLES GESTION PELICULAS --------------------*/
 .centrar-gestion{
 	display: flex;
 	flex-direction: column;
@@ -470,7 +470,7 @@ img:hover{
 	}
 }
 
-/*----------------------------------------------------------------------------- STYLES FOOTER --------------*/
+/*------------------------ STYLES FOOTER ----------------------*/
 .footer{
 	color: white;
 	padding: 30px 50px;
@@ -540,7 +540,7 @@ img:hover{
 	background-color: darkred;
 }
 
-/*--------------------------------------------------------------- STYLES SCREEN TABLETS Y CELULARES -------------------*/
+/*------------------------ STYLES SCREEN TABLETS Y CELULARES -------------------*/
 
 @media(max-width:935px){
 	.navegador{
@@ -667,7 +667,7 @@ img:hover{
 	}
 	img{
 		height: 200px;
-		width: 150px;
+		width: 100%;
 	}
 	.catalogoFinal{
 		width: 50%;
@@ -701,16 +701,23 @@ img:hover{
 		display: flow-root;
 		padding: 10px;
 	}
+	.formInicio_usuario{
+		display: flex;
+		justify-content: center;
+		align-items:end;
+		height: 40px;
+	}
 }
 
-/*-------------------ESTILOS PARA API CLIMA-----------------------*/
+/*-------------------  ESTILOS PARA API CLIMA  -----------------------*/
 .container{
-	 height: 35px;
+	 height: 30px;
 	 width: 100%;
 	 position: fixed;
 	 bottom: 0;
-	 background-color:rgba(255, 255, 255, 0.37);
+	 background-color:rgba(255, 255, 255, 0.17);
 	 box-sizing: border-box;
+	 font-size: .8rem;
 }
      
 .card-titulo{
@@ -735,7 +742,7 @@ img:hover{
 	 height: 100%;
 	 display: flex;
 	 flex-direction: row;
-	 justify-content: center;
+	 justify-content: space-around;
 	 align-items: center;
 	 right: 0;
 }
@@ -771,4 +778,3 @@ img:hover{
 		justify-content: center;
 	}
 }
-/*--------------------------------*/

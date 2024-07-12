@@ -21,41 +21,37 @@ document.addEventListener("DOMContentLoaded",()=>{
         const imagen = document.getElementById("imagen").value.trim();
         const botonagregar = document.getElementById("botonagregar");
         const inputs = document.querySelectorAll("#form input");
-        
-        // Expresiones regulares para validacion de cada campo
-        const expresiones = {
-            usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-            nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-            password: /^.{4,12}$/, // 4 a 12 digitos.
-            correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-            telefono: /^\d{7,14}$/ // 7 a 14 numeros.
-        }
-        // Recorro cada input y valido que no este vacio
-        inputs.forEach((input) => {
-            let validar = true;
-            if(input == "" || sinopsis == ""){
+
+        // valido que no ningun campo este vacio
+            if(titulo == "" || genero == "" || duracion == "" || director == "" || reparto == "" || sinopsis == "" || imagen == ""){
                 validar = false;
                 error(validar);
             }else{
                 limpiarCampos(validar);
             }
-        });
-            /*input.addEventListener("keyup",validarformulario);
-            input.addEventListener("blur",validarformulario);*/
         
         // Funciones de errores y campos validos
         function error(validar){
             document.getElementById("parrafoValidacion").innerHTML = "faltan completar campos";   
+            setTimeout(()=>{
+            document.getElementById("parrafoValidacion").innerHTML = "";   
+            },3000);
+                
         };
 
         function limpiarCampos(){
             let campos = document.querySelectorAll("#form input");
+            // limpio los valores de cada campo
             campos.forEach((campo) => {
                 campo.value = "";
             });
             let textarea = document.querySelector("#form textarea");
             textarea.value = "";
             document.getElementById("parrafoValidacion").innerHTML = "completaste todo con exito";
+            // elimino el texto despues de 3 segundos
+            setTimeout(()=>{
+            document.getElementById("parrafoValidacion").innerHTML = "";   
+            },3000);   
         };
 
     });

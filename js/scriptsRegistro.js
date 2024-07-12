@@ -17,10 +17,6 @@ document.addEventListener("DOMContentLoaded",()=>{
         let check = document.getElementById("check").checked;
         const inputs = document.querySelectorAll("#form .js");
     
-        //let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // estructura texto@texto.texto
-        //let resultado = emailPattern.test(email);
-
         // Recorro todos los campos y verifico que no esten vacios
         for (let index = 0; index < inputs.length; index++) {
             let validar = true;
@@ -44,6 +40,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
         function limpiarCampos(validar){
             let campos = document.querySelectorAll(".inputs");
+            // limpio los valores de cada campo
             campos.forEach((campo) => {
             campo.value = "";
             });
@@ -54,6 +51,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             input.style.backgroundColor = "dimgray";
             });
             document.getElementById("parrafoValidacion").innerHTML = "te registraste con exito";                        
+            // elimino el texto despues de 3 segundos
             setTimeout(()=>{
             document.getElementById("parrafoValidacion").innerHTML = "";            
             },3000);    
@@ -61,3 +59,20 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     });
 });
+
+
+/*
+Expresiones regulares para validacion de cada campo si a futuro se requiere
+    
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    estructura texto@texto.texto
+    let resultado = emailPattern.test(email);
+
+    const expresiones = {
+    usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    password: /^.{4,12}$/, // 4 a 12 digitos.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
+*/
