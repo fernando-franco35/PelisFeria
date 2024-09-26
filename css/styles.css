@@ -51,13 +51,10 @@ ul {
 	gap: 10px;
 }
 
-.listaRegistro{
-	justify-content: space-between;
-	padding: 0 10px;
-}
-
 .listaRegistro-last{
 	display: flex;
+	justify-content: end;
+	padding: 30px;
 }
 
 .active{
@@ -284,6 +281,7 @@ img{
 	border: white 1px solid;
 	height: 220px;
 	width: 150px;
+	border-radius: 10px;
 }
 
 img:hover{
@@ -441,9 +439,6 @@ img:hover{
 }
 
 @media(max-width:630px){
-	.listaRegistro-last{
-		justify-content: center;
-	}
 	.row1-gestion{
 		display: flex;
 		flex-direction: column;
@@ -557,7 +552,7 @@ img:hover{
 		width: 100px;
 	}
 	img{
-		width: 100px;
+		width: 150px;
 	}
 	.fotos a{
 		padding: 0;
@@ -619,7 +614,7 @@ img:hover{
 }
 }
 
-@media(max-width:500px){
+@media(max-width:647px){
 	.navegador{
 		padding: 0;
 	}
@@ -632,6 +627,7 @@ img:hover{
 	.headerNavIndex ul,.headerRegistroNav ul,.headerDetalleNav ul{
 		width: 100%;
 		padding: 0;
+		box-sizing: border-box;
 	}
 	.headerRegistro{
 		height: 100%;
@@ -640,15 +636,8 @@ img:hover{
 	.listaRegistro{
 		box-sizing: border-box;
 	}
-	.listaRegistro:first-child{
-		padding: 0 10px;
-	}
-	.listaRegistro a{
-		text-wrap: nowrap;
-		display: flex;
-	}
-	.listaRegistro li{
-		padding: 0;
+	.listaRegistro-last :last-child{
+		padding: 10px;
 	}
 	.formInicio{
 		width: 280px;
@@ -676,8 +665,7 @@ img:hover{
 		padding: 0;
 	}
 	img{
-		height: 200px;
-		width: 100%;
+		width: 150px;
 	}
 	.catalogoFinal{
 		width: 50%;
