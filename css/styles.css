@@ -18,7 +18,7 @@ p{
 }
 
 .logo {
-	padding: 10px;
+	padding: 0;
 }
 
 .header{
@@ -42,12 +42,13 @@ p{
 
 ul {
 	display: flex;
-	justify-content: end;
+	justify-content: start;
 	align-items: center;
 	color: white;
 	list-style-type: none;
-	padding: 0 30px;
+	padding: 0 10px;
 	margin: 0;
+	gap: 10px;
 }
 
 .listaRegistro{
@@ -440,6 +441,9 @@ img:hover{
 }
 
 @media(max-width:630px){
+	.listaRegistro-last{
+		justify-content: center;
+	}
 	.row1-gestion{
 		display: flex;
 		flex-direction: column;
@@ -472,7 +476,7 @@ img:hover{
 
 /*------------------------ STYLES FOOTER ----------------------*/
 .footer{
-	color: white;
+	color: black;
 	padding: 30px 50px;
 	align-items: center;
 	background-color: gray;
@@ -493,9 +497,6 @@ img:hover{
 	column-gap: 30px;
 }
 
-.redes a{
-	opacity: 0.5;
-}
 .logos{
 	background-color: white;
 	padding: 15px;
@@ -513,18 +514,17 @@ img:hover{
 }
 
 .panelDeAyuda a{
-	color: white;
+	color: black;
 	text-decoration: none;
 	padding: 0;
-	opacity: 0.5;
 }
 
 .panelDeAyuda a:hover{
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .redes a:hover{
-	opacity: 1;
+	opacity: 0.5;
 }
 
 .enlaceAdministrador{
@@ -533,6 +533,7 @@ img:hover{
 	text-transform: uppercase;
 	background-color: indianred;
 	padding: 10px 35px;
+	color: black;
 }
 
 .enlaceAdministrador:hover{
@@ -543,7 +544,7 @@ img:hover{
 
 @media(max-width:935px){
 	.navegador{
-		padding: 20px;
+		padding: 0;
 	}
 	.logo{
 		padding-left: 20px;
@@ -619,6 +620,9 @@ img:hover{
 }
 
 @media(max-width:500px){
+	.navegador{
+		padding: 0;
+	}
 	.buscador input{
 		width: 80%;
 	}
@@ -637,7 +641,14 @@ img:hover{
 		box-sizing: border-box;
 	}
 	.listaRegistro:first-child{
-		padding-left: 20px;
+		padding: 0 10px;
+	}
+	.listaRegistro a{
+		text-wrap: nowrap;
+		display: flex;
+	}
+	.listaRegistro li{
+		padding: 0;
 	}
 	.formInicio{
 		width: 280px;
